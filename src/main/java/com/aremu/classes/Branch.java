@@ -28,7 +28,7 @@ public class Branch implements IBranch {
 
     @Override
     public boolean newCustomer(String customerName, double initialTransaction) {
-        if (findCustomer(customerName) == null){
+        if (findCustomer(customerName) == null) {
             Customer customer = new Customer(customerName, initialTransaction);
             customers.add(customer);
             return true;
@@ -38,19 +38,19 @@ public class Branch implements IBranch {
 
     @Override
     public boolean addCustomerTransaction(String customerName, double transaction) {
-            if(findCustomer(customerName) != null ){
-                Customer customer = findCustomer(customerName);
-                customer.addTransactions(transaction);
-                return true;
-            }
+        if (findCustomer(customerName) != null) {
+            Customer customer = findCustomer(customerName);
+            customer.addTransactions(transaction);
+            return true;
+        }
 
 
         return false;
     }
 
     private Customer findCustomer(String customerName) {
-        for (Customer customer: customers){
-            if (customer.getName().equalsIgnoreCase(customerName)){
+        for (Customer customer : customers) {
+            if (customer.getName().equalsIgnoreCase(customerName)) {
                 return customer;
             }
         }

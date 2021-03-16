@@ -48,21 +48,30 @@ public class Bank implements IBank {
     @Override
     public boolean listCustomers(String branchName, boolean printTransaction) {
         if (findBranch(branchName) != null) {
-            if (printTransaction) {
-                Branch branch = findBranch(branchName);
-                ArrayList<Customer> allCustomers = branch.getCustomers();
 
-                for (Customer customer : allCustomers) {
-                    ArrayList<Double> allTransactions = customer.getTransactions();
-                    for (double transaction : allTransactions) {
-                        int count = 0;
-                        count = allCustomers.indexOf(customer) + 1;
-                        System.out.println("Customer Details  for Branch " + branchName);
-                        System.out.println("Customer: " + (customer.getName()) + " [" + count + "] ");
-                        System.out.println("Transactions");
-                        System.out.println("Amount " + transaction);
-                    }
+        }
+        Branch branch = findBranch(branchName);
+        ArrayList<Customer> allCustomers = branch.getCustomers();
+        System.out.println("Customer Details  for Branch " + branchName);
+        if (printTransaction) {
+            for (Customer customer : allCustomers) {
+                ArrayList<Double> allTransactions = customer.getTransactions();
+                int count = 0;
+                count = allCustomers.indexOf(customer) + 1;
+                System.out.println("Customer: " + (customer.getName()) + " [" + count + "] ");
+                System.out.println("Transactions");
+                for (double transaction : allTransactions) {
+                    int loop = 0;
+                    loop = allTransactions.indexOf(transaction) + 1;
+                    System.out.println(" [" + loop + "] Amount " + transaction);
                 }
+            }
+        } else {
+            for (Customer customer : allCustomers) {
+                int count = 0;
+                count = allCustomers.indexOf(customer) + 1;
+                System.out.println("Customer: " + (customer.getName()) + " [" + count + "] ");
+
             }
             return true;
         }
