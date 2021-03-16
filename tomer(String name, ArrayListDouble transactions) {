@@ -1,0 +1,35 @@
+[33mcommit 11f8503d48361fbf572488d6846479227b58c9d5[m[33m ([m[1;36mHEAD -> [m[1;32mdevelopment[m[33m, [m[1;31morigin/development[m[33m)[m
+Author: Victor-Aremu <77357316+Victor-Aremu@users.noreply.github.com>
+Date:   Tue Mar 16 09:03:34 2021 +0000
+
+    classes created
+
+[33mcommit e2cabad6b7e91cae2de0f8f047bc6f688c0d8f36[m
+Author: Victor-Aremu <77357316+Victor-Aremu@users.noreply.github.com>
+Date:   Tue Mar 16 08:11:06 2021 +0000
+
+    addbranch and add customer methods
+
+[33mcommit eb11917edb1d2d6cac277b7f69faa84a4790a5ea[m
+Author: Victor-Aremu <77357316+Victor-Aremu@users.noreply.github.com>
+Date:   Tue Mar 16 05:35:11 2021 +0000
+
+    testing
+
+[33mcommit e624c55be148d1b5ea51c56c63d4eec44157aae4[m
+Author: Victor-Aremu <77357316+Victor-Aremu@users.noreply.github.com>
+Date:   Tue Mar 16 05:33:40 2021 +0000
+
+    Update Branch.java
+
+[33mcommit 2f6d0fba52c2c60e3a606e54f459679f515b9f49[m
+Author: Victor-Aremu <77357316+Victor-Aremu@users.noreply.github.com>
+Date:   Tue Mar 16 05:31:32 2021 +0000
+
+    Started work 16/03/21
+
+[33mcommit 65b165d2edc94f12ffad21f1a9bd0e23e278a74e[m[33m ([m[1;32mmaster[m[33m)[m
+Author: Victor-Aremu <77357316+Victor-Aremu@users.noreply.github.com>
+Date:   Tue Mar 16 05:28:09 2021 +0000
+
+    Initial commit

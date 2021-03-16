@@ -1,9 +1,11 @@
 package com.aremu.classes;
 
 
+import com.aremu.interfaces.ICustomer;
+
 import java.util.ArrayList;
 
-public class Customer {
+public class Customer implements ICustomer {
     private String name;
     private ArrayList<Double> transactions;
 
@@ -13,16 +15,18 @@ public class Customer {
         this.transactions = transactions;
     }
 
+    @Override
     public String getName() {
-        return name;
+        return null;
     }
 
+    @Override
     public ArrayList<Double> getTransactions() {
-        return transactions;
+        return null;
     }
 
-    public void addTransactions(double Transaction){
+    @Override
+    public void addTransactions(double Transaction) {
 
     }
-
 }
