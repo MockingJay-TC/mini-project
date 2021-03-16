@@ -36,8 +36,10 @@ public class Bank implements IBank {
 
     @Override
     public boolean addCustomerTransaction(String branchName, String customerName, double transaction) {
-        if (findBranch(branchName) !=null){
-
+        if (findBranch(branchName) != null) {
+            Branch branch = findBranch(branchName);
+            branch.addCustomerTransaction(customerName, transaction);
+            return true;
         }
 
         return false;
@@ -45,17 +47,27 @@ public class Bank implements IBank {
 
     @Override
     public boolean listCustomers(String branchName, boolean printTransaction) {
-        if (findBranch(branchName) != null ){
-            if (printTransaction){
+        if (findBranch(branchName) != null) {
+            if (printTransaction) {
+                Branch branch = findBranch(branchName);
+                ArrayList<Customer> allCustomers = branch.getCustomers();
 
+                for (Customer customer : allCustomers) {
+                    ArrayList<Double> allTransactions = customer.getTransactions();
+                    for (double transaction : allTransactions) {
+                        int count = 0;
+                        count = allCustomers.indexOf(customer) + 1;
+                        System.out.println("Customer Details  for Branch " + branchName);
+                        System.out.println("Customer: " + (customer.getName()) + " [" + count + "] ");
+                        System.out.println("Transactions");
+                        System.out.println("Amount " + transaction);
+                    }
+                }
             }
-
-            return  true;
-
+            return true;
         }
         return false;
     }
-
 
     private Branch findBranch(String branchName) {
         for (Branch branch : branches) {

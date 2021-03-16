@@ -39,8 +39,8 @@ public class Branch implements IBranch {
     @Override
     public boolean addCustomerTransaction(String customerName, double transaction) {
             if(findCustomer(customerName) != null ){
-                Customer customer = new Customer();
-                customer.getTransactions();
+                Customer customer = findCustomer(customerName);
+                customer.addTransactions(transaction);
                 return true;
             }
 
