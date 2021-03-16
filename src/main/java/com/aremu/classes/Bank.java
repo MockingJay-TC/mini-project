@@ -1,6 +1,4 @@
 package com.aremu.classes;
-
-import com.aremu.classes.Branch;
 import com.aremu.interfaces.IBank;
 
 import java.util.ArrayList;

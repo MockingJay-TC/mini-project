@@ -1,6 +1,5 @@
 package com.aremu.classes;
 
-import com.aremu.classes.Customer;
 import com.aremu.interfaces.IBranch;
 
 import java.util.ArrayList;
