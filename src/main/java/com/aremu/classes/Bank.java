@@ -16,28 +16,54 @@ public class Bank implements IBank {
     }
 
     @Override
-    public boolean addBranch(String name) {
+    public boolean addBranch(String branchName) {
+        if (findBranch(branchName) == null) {
+            Branch branch = new Branch(branchName);
+            return this.branches.add(branch);
+        }
         return false;
     }
 
     @Override
     public boolean addCustomer(String branchName, String customerName, double initialTransaction) {
+        if (findBranch(branchName) != null) {
+            Branch branch = findBranch(branchName);
+            branch.newCustomer(customerName, initialTransaction);
+
+        }
         return false;
     }
 
     @Override
     public boolean addCustomerTransaction(String branchName, String customerName, double transaction) {
+        if (findBranch(branchName) !=null){
+
+        }
+
         return false;
     }
 
     @Override
-    public boolean listCustomers(String branchName) {
+    public boolean listCustomers(String branchName, boolean printTransaction) {
+        if (findBranch(branchName) != null ){
+            if (printTransaction){
+
+            }
+
+            return  true;
+
+        }
         return false;
     }
 
-    private void findBranch(String branchName) {
 
+    private Branch findBranch(String branchName) {
+        for (Branch branch : branches) {
+            if (branch.getName().equalsIgnoreCase(branchName)) {
+                return branch;
+            }
+        }
+        return null;
     }
-
 }
 //Victor.Aremu

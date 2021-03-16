@@ -7,5 +7,5 @@ public interface IBank {
 
     boolean addCustomerTransaction(String branchName, String customerName, double transaction);
 
-    boolean listCustomers(String branchName);
+    boolean listCustomers(String branchName, boolean printTransaction);
 }

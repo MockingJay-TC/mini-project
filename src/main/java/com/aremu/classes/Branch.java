@@ -18,27 +18,43 @@ public class Branch implements IBranch {
 
     @Override
     public String getName() {
-        return null;
+        return this.name;
     }
 
     @Override
     public ArrayList<Customer> getCustomers() {
-        return null;
+        return this.customers;
     }
 
     @Override
     public boolean newCustomer(String customerName, double initialTransaction) {
+        if (findCustomer(customerName) == null){
+            Customer customer = new Customer(customerName, initialTransaction);
+            customers.add(customer);
+            return true;
+        }
         return false;
     }
 
     @Override
     public boolean addCustomerTransaction(String customerName, double transaction) {
+            if(findCustomer(customerName) != null ){
+                Customer customer = new Customer();
+                customer.getTransactions();
+                return true;
+            }
+
+
         return false;
     }
 
-    @Override
-    public void findCustomer(String customerName) {
-
+    private Customer findCustomer(String customerName) {
+        for (Customer customer: customers){
+            if (customer.getName().equalsIgnoreCase(customerName)){
+                return customer;
+            }
+        }
+        return null;
     }
 }
 //Victor.Aremu

@@ -14,5 +14,5 @@ public interface IBranch {
 
     boolean addCustomerTransaction(String customerName, double transaction);
 
-    void findCustomer(String customerName);
+
 }
