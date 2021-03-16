@@ -17,5 +17,10 @@ public class Bank {
         return false;
     }
 
+    public boolean addCustomer(String branchName, String customerName, double initialTransaction){
+        return false;
+    }
+
+
 }
 //Victor.Aremu
