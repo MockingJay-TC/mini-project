@@ -7,9 +7,11 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CustomerTest {
+    Customer customer;
 
     @Before
     public void setUp() throws Exception {
+        customer = new Customer("Victor", 800);
     }
 
     @After
@@ -18,6 +20,7 @@ public class CustomerTest {
 
     @Test
     public void getName() {
+        assertEquals("Victor", customer.getName());
     }
 
     @Test

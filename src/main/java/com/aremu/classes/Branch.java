@@ -27,7 +27,7 @@ public class Branch implements IBranch {
 
     @Override
     public boolean newCustomer(String customerName, double initialTransaction) {
-        if (findCustomer(customerName) == null && !customerName.equals("")) {
+        if (findCustomer(customerName) == null && !customerName.equals("") && initialTransaction > 0) {
             Customer customer = new Customer(customerName, initialTransaction);
             customers.add(customer);
             return true;

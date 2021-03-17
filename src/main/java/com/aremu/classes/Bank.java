@@ -26,7 +26,7 @@ public class Bank implements IBank {
     public boolean addCustomer(String branchName, String customerName, double initialTransaction) {
         if (findBranch(branchName) != null) {
             Branch branch = findBranch(branchName);
-            branch.newCustomer(customerName, initialTransaction);
+            return branch.newCustomer(customerName, initialTransaction);
 
         }
         return false;

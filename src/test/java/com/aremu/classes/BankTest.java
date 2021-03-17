@@ -7,9 +7,13 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class BankTest {
+    private Bank bank;
 
     @Before
     public void setUp() throws Exception {
+        bank = new Bank("PhoenixMJ");
+        bank.addBranch("Derby Avenue");
+        bank.addCustomer("Derby Avenue", "Victor", 900.0);
     }
 
     @After
@@ -18,7 +22,8 @@ public class BankTest {
 
     @Test
     public void addBranch() {
-
+        assertTrue(bank.addBranch("Assakae Branch"));
+        assertFalse(bank.addBranch("Derby Avenue"));
     }
 
     @Test

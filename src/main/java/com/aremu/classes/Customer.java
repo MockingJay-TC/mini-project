@@ -10,7 +10,9 @@ public class Customer implements ICustomer {
 
 
     public Customer(String name, double initialTransaction) {
+        initialTransaction = initialTransaction < 0 ? 0 : initialTransaction;
         this.name = name;
+//        instantiate the transactions arrayList
         this.transactions = new ArrayList<>();
         this.transactions.add(initialTransaction);
     }
@@ -27,7 +29,9 @@ public class Customer implements ICustomer {
 
     @Override
     public void addTransactions(double transaction) {
-        transactions.add(transaction);
+        if (transaction > 0) {
+            transactions.add(transaction);
+        }
     }
 }
 //Victor.Aremu

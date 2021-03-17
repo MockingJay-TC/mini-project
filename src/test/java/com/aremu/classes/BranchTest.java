@@ -7,9 +7,11 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class BranchTest {
+    Branch branch;
 
     @Before
     public void setUp() throws Exception {
+        branch = new Branch("Derby Avenue");
     }
 
     @After

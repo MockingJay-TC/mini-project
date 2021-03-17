@@ -15,6 +15,8 @@ public class Main {
 
         bank.listCustomers("Adelaide", true);
 
+//******************************************************************************************************//
+
         bank.listCustomers("Adelaide", false);
 
     }
