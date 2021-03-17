@@ -12,6 +12,8 @@ public class CustomerTest {
     @Before
     public void setUp() throws Exception {
         customer = new Customer("Victor", 800);
+        customer.addTransactions(400.0);
+        customer.getTransactions();
     }
 
     @After
@@ -25,9 +27,12 @@ public class CustomerTest {
 
     @Test
     public void getTransactions() {
+        assertEquals(400.0, customer.getTransactions());
     }
 
     @Test
     public void addTransactions() {
+//        assertEquals(customer.addTransactions("victor"));
     }
 }
+//Victor.Aremu

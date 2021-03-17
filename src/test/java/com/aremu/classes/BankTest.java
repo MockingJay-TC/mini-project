@@ -14,6 +14,9 @@ public class BankTest {
         bank = new Bank("PhoenixMJ");
         bank.addBranch("Derby Avenue");
         bank.addCustomer("Derby Avenue", "Victor", 900.0);
+        bank.addCustomerTransaction("Assakae", "Victor", 700);
+        bank.listCustomers("Derby Avenue", false);
+
     }
 
     @After
@@ -28,13 +31,20 @@ public class BankTest {
 
     @Test
     public void addCustomer() {
+        assertTrue(bank.addCustomer("Derby Avenue", "Thomas", 700));
+        assertFalse(bank.addCustomer("Derby Avenue", "Victor", -23));
     }
 
     @Test
     public void addCustomerTransaction() {
+        assertTrue(bank.addCustomerTransaction("Assakae", "Thomas", 600));
+        assertFalse(bank.addCustomerTransaction("Whindo", "Lash", -600));
     }
 
     @Test
     public void listCustomers() {
+        assertTrue(bank.listCustomers("Derby Avenue",  false));
+        assertFalse(bank.listCustomers("Assakae",  false));
     }
 }
+//Victor.Aremu
