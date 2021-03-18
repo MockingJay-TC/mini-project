@@ -13,7 +13,8 @@ public class BranchTest {
     public void setUp() throws Exception {
         branch = new Branch("Derby Avenue");
         branch.addCustomerTransaction("Victor", 700);
-        branch.newCustomer("victor", 690);
+        branch.newCustomer("Victor", 690);
+        branch.getCustomers();
     }
 
     @After
@@ -27,6 +28,8 @@ public class BranchTest {
 
     @Test
     public void getCustomers() {
+        assertEquals("Victor", branch.getCustomers().get(0).getName());
+//        System.out.println(branch.getCustomers().get(0).getName());
     }
 
     @Test

@@ -29,7 +29,9 @@ public class Bank implements IBank {
             return branch.newCustomer(customerName, initialTransaction);
 
         }
-        return false;
+        else {
+            return false;
+        }
     }
 
     @Override
@@ -46,8 +48,6 @@ public class Bank implements IBank {
     @Override
     public boolean listCustomers(String branchName, boolean printTransaction) {
         if (findBranch(branchName) != null) {
-
-        }
         Branch branch = findBranch(branchName);
         ArrayList<Customer> allCustomers = branch.getCustomers();
         System.out.println("Customer Details  for Branch " + branchName);
@@ -71,6 +71,7 @@ public class Bank implements IBank {
                 System.out.println("Customer: " + (customer.getName()) + "[" + count + "] ");
 
             }
+        }
             return true;
         }
         return false;

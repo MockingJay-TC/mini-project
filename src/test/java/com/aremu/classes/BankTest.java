@@ -34,18 +34,23 @@ public class BankTest {
     public void addCustomer() {
         assertTrue(bank.addCustomer("Derby Avenue", "Thomas", 700));
         assertFalse(bank.addCustomer("Derby Avenue", "Victor", -23));
+        assertFalse(bank.addCustomer("Whindo", "Victor", -23));
     }
 
     @Test
     public void addCustomerTransaction() {
         assertTrue(bank.addCustomerTransaction("Assakae", "Victor", 600));
         assertFalse(bank.addCustomerTransaction("Whindo", "Lash", -600));
+
+
     }
 
     @Test
     public void listCustomers() {
-        assertTrue(bank.listCustomers("Derby Avenue",  false));
-        assertFalse(bank.listCustomers("Assakae",  false));
+        assertTrue(bank.listCustomers("Derby Avenue", true));
+        assertTrue(bank.listCustomers("Derby Avenue", false));
+        assertFalse(bank.listCustomers("Whindo", true));
+        assertFalse(bank.listCustomers("Whindo", false));
     }
 }
 //Victor.Aremu
