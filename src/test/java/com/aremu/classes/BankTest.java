@@ -13,6 +13,7 @@ public class BankTest {
     public void setUp() throws Exception {
         bank = new Bank("PhoenixMJ");
         bank.addBranch("Derby Avenue");
+        bank.addBranch("Assakae");
         bank.addCustomer("Derby Avenue", "Victor", 900.0);
         bank.addCustomerTransaction("Assakae", "Victor", 700);
         bank.listCustomers("Derby Avenue", false);
@@ -37,7 +38,7 @@ public class BankTest {
 
     @Test
     public void addCustomerTransaction() {
-        assertTrue(bank.addCustomerTransaction("Assakae", "Thomas", 600));
+        assertTrue(bank.addCustomerTransaction("Assakae", "Victor", 600));
         assertFalse(bank.addCustomerTransaction("Whindo", "Lash", -600));
     }
 

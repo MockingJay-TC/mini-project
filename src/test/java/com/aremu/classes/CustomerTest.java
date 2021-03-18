@@ -27,7 +27,7 @@ public class CustomerTest {
 
     @Test
     public void getTransactions() {
-        assertEquals(400.0, customer.getTransactions());
+        assertEquals(400.0, customer.getTransactions().get(1), 0.01);
     }
 
     @Test
